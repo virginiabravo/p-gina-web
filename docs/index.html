@@ -1,16 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Las especies amenazadas que sí vemos y las que ignoramos</title>
-    </head>
-    <body>
-        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las especies amenazadas que sí vemos y las que ignoramos</title>
+    
+    <!-- Fuentes oficiales del proyecto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variables de la Identidad Visual */
+        :root {
+            --fondo: #FBF8F0;
+            --texto: #1F3D5B;
+            --titulos: #91532B;
+            --enlaces: #0695D1;
+            --datos-verde: #529E47;
+            --destacado-burgundy: #86223E;
+            --recuadros: #EFEDA0;
+            
+            --fuente-titulos: 'Capriola', sans-serif;
+            --fuente-cuerpo: 'Lora', serif;
+        }
+
+        body {
+            background-color: var(--fondo);
+            color: var(--texto);
+            font-family: var(--fuente-cuerpo);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor central para simular el ancho de un libro o artículo */
+        .contenedor {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1, h2 {
+            font-family: var(--fuente-titulos);
+            color: var(--titulos);
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 24px;
+        }
+
+        strong {
+            color: var(--destacado-burgundy);
+        }
+
+        a {
+            color: var(--enlaces);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--titulos);
+            text-decoration: underline;
+        }
+
+        /* Recuadro flotante para destacar el gráfico */
+        .grafico-container {
+            background-color: var(--recuadros);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid var(--datos-verde);
+            border-radius: 4px;
+            display: block;
+        }
+
+        .epigrafe {
+            font-size: 0.95rem;
+            color: var(--texto);
+            text-align: center;
+            font-style: italic;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid var(--datos-verde);
+            text-align: center;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
         <header>
             <h1>Las especies amenazadas que sí vemos y las que ignoramos</h1>
         </header>
 
-        <div style="text-align: justify;">
+        <main>
             <p>
                 Algunas especies logran instalarse en la memoria colectiva incluso sin haber sido vistas nunca en persona. Basta escuchar sus nombres para imaginarlas: el huemul cruzando montañas nevadas del sur de Chile; el pingüino de Humboldt desplazándose entre rocas costeras del norte; o la pequeña ranita de Darwin, anfibio diminuto cuyo método de reproducción parece inventado por la ciencia ficción. Hay animales que, por distintas razones, consiguen permanecer presentes dentro del imaginario cultural.
             </p>
@@ -33,7 +151,10 @@
 
             <h2>Visualización: El termómetro digital</h2>
 
-            <img src="vis_02.jpg" alt="Gráfico de búsquedas en Wikipedia de especies chilenas" width="100%">
+            <div class="grafico-container">
+                <img src="vis_02.jpg" alt="Gráfico de búsquedas en Wikipedia de especies chilenas">
+                <p class="epigrafe">Contraste de búsquedas en Wikipedia entre el Top 10 de especies mediáticas y el Bottom 10 de especies invisibles.</p>
+            </div>
 
             <h2>La paradoja del carisma</h2>
 
@@ -70,13 +191,14 @@
             <p>
                 Cada especie amenazada posee una historia propia, una forma particular de habitar el territorio y una posición específica dentro del engranaje de la vida. Sin embargo, no todas ocupan el mismo lugar dentro de la memoria colectiva. Algunas logran convertirse en emblemas reconocibles o fetiches de la cultura digital; otras desaparecen silenciosamente, asfixiadas por el desinterés, incluso antes de que la mayoría aprenda sus nombres.
             </p>
-        </div>
+        </main>
 
         <footer>
-            <p style="text-align: center;">
+            <p>
                 Datos extraídos a través de la herramienta <a href="https://pageviews.wmcloud.org/" target="_blank">Wikipedia Pageviews Analysis</a>.
             </p>
         </footer>
+    </div>
 
-    </body>
+</body>
 </html>
