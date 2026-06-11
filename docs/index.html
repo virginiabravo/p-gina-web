@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Las especies amenazadas que sí vemos y las que ignoramos</title>
     
-    <!-- Fuentes oficiales del proyecto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -18,6 +17,7 @@
             --titulos: #91532B;
             --enlaces: #0695D1;
             --datos-verde: #529E47;
+            --interfaz: #187670;
             --destacado-burgundy: #86223E;
             --recuadros: #EFEDA0;
             
@@ -43,7 +43,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         h1, h2 {
@@ -55,7 +55,28 @@
         h1 {
             font-size: 2.5rem;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* NUEVO: Estilos para la bajada periodística */
+        .bajada {
+            font-size: 1.3rem;
+            color: var(--texto);
+            font-style: italic;
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        /* NUEVO: Estilos para la línea divisoria */
+        .linea-divisoria {
+            border: 0;
+            height: 3px;
+            background-color: var(--interfaz); /* Color Teal de la identidad visual */
+            width: 100%;
+            margin-bottom: 40px;
+            border-radius: 2px;
         }
 
         h2 {
@@ -115,7 +136,7 @@
         footer {
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 2px solid var(--datos-verde);
+            border-top: 2px solid var(--interfaz);
             text-align: center;
             font-size: 0.95rem;
         }
@@ -126,6 +147,12 @@
     <div class="contenedor">
         <header>
             <h1>Las especies amenazadas que sí vemos y las que ignoramos</h1>
+            
+            <p class="bajada">
+                Mientras el huemul y el pingüino dominan nuestro imaginario, una silenciosa brecha digital en Wikipedia condena a la extinción absoluta a decenas de especies que carecen de carisma mediático.
+            </p>
+            
+            <hr class="linea-divisoria">
         </header>
 
         <main>
